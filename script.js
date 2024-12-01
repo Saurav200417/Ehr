@@ -6,6 +6,7 @@ const users = [
 
 // Load uploaded files from session storage or initialize
 const uploadedFiles = JSON.parse(sessionStorage.getItem('uploadedFiles')) || [];
+const fileAccess = JSON.parse(sessionStorage.getItem('fileAccess')) || {};
 
 function showPopup(message) {
     const popup = document.getElementById("success-popup");
@@ -81,7 +82,21 @@ document.getElementById("upload-form-user").addEventListener("submit", (event) =
     event.target.reset();
 });
 
-// Populate files in view-files.html
+// Grant access to files for a specific user (Admin functionality)
+function grantAccess() {
+    const fileName = document.getElementById("access-file-name").value;
+    const userAddress = document.getElementById("user-address").value;
+
+    if (!fileAccess[fileName]) {
+        fileAccess[fileName] = [];
+    }
+    fileAccess[fileName].push(userAddress);
+    sessionStorage.setItem('fileAccess', JSON.stringify(fileAccess));
+
+    showPopup(`Access granted to ${userAddress} for file ${fileName}`);
+}
+
+// Populate files in the View Files page
 function populateFilesTable() {
     const filesList = document.getElementById("files-list");
     filesList.innerHTML = "";
@@ -90,7 +105,7 @@ function populateFilesTable() {
         row.innerHTML = `
             <td>${file.fileName}</td>
             <td>${file.cid}</td>
-            <td><button onclick="deleteFile(${index})">Delete</button></td>
+            <td><button class="delete-btn" onclick="deleteFile(${index})">Delete</button></td>
         `;
         filesList.appendChild(row);
     });
