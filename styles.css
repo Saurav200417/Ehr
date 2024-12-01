@@ -14,7 +14,7 @@ body {
 
 /* Background image after login */
 body.logged-in {
-    background-image: url("photo2.jpg"); /* Background image after login */
+    background-image: url("bg.png"); /* Background image after login */
 }
 
 
