@@ -117,6 +117,6 @@ button.logout-btn {
     margin: 0 auto;
     text-align: center;
     display: block;
-    width: auto; /* Adjust the width if necessary */
+    width: 45%; /* Adjust the width if necessary */
 }
 
