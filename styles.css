@@ -1,22 +1,14 @@
 /* Apply a background image to the entire page */
-/* Default background for the login page */
 body {
     font-family: Arial, sans-serif;
-    background-image: url("photo1.jpg"); /* Background image for login page */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+    background-image: url("photo1.jpg");
+    background-size: cover;           /* Ensures the image covers the entire page */
+    background-repeat: no-repeat;      /* Prevents the image from repeating */
+    background-position: center;       /* Centers the image */
+    background-attachment: fixed;      /* Keeps the image fixed when scrolling */
     margin: 0;
     padding: 0;
-    transition: background-image 0.5s ease; /* Smooth transition for background change */
 }
-
-/* Background image after login */
-body.logged-in {
-    background-image: url("bg.png"); /* Background image after login */
-}
-
 
 /* Main heading style */
 .main-heading {
@@ -105,18 +97,8 @@ button:hover {
     display: none;
 }
 
-button.logout-btn {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0 auto;
-    text-align: center;
-    display: block;
-    width: auto; /* Adjust the width if necessary */
+/* Logout button at the bottom of the container */
+.bottom-logout {
+    margin-top: 20px;   /* Adds spacing at the top */
+    width: 100%;        /* Full-width button */
 }
-
