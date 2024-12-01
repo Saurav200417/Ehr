@@ -10,7 +10,7 @@ function populateFilesTable() {
         row.innerHTML = `
             <td>${file.fileName}</td>
             <td>${file.cid}</td>
-            <td><button onclick="deleteFile(${index})">Delete</button></td>
+            <td><button class="delete-btn" onclick="deleteFile(${index})">Delete</button></td>
         `;
         filesList.appendChild(row);
     });
