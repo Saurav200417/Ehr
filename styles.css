@@ -13,7 +13,7 @@ body {
 
 /* Background image after login */
 body.logged-in {
-    background-image: url("photo2.jpg");
+    background-image: url("bg.png");
 }
 
 /* Main heading style */
