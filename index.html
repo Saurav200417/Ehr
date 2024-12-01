@@ -30,10 +30,14 @@
         <input type="text" id="file-cid-admin" placeholder="File CID" required>
         <button type="submit">Upload</button>
     </form>
+    <h3>Manage Access</h3>
+    <form id="access-form">
+        <input type="text" id="access-file-name" placeholder="File Name" required>
+        <input type="text" id="user-address" placeholder="User Address" required>
+        <button type="button" id="grant-access">Grant Access</button>
+    </form>
     <h3>All Files</h3>
     <button onclick="window.location.href='view-files.html'">View All Files</button>
-    <!-- Logout button at the bottom -->
-    <button class="logout-btn bottom-logout" onclick="logout()">Logout</button>
 </div>
 
 <div class="container hidden" id="user-container">
