@@ -106,7 +106,17 @@ button:hover {
 }
 
 /* Logout button at the bottom of the container */
-.bottom-logout {
-    margin-top: 20px;   /* Adds spacing at the top */
-    width: 100%;        /* Full-width button */
+button.logout-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: auto; /* Adjust the width if necessary */
 }
