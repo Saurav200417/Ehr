@@ -105,7 +105,6 @@ button:hover {
     display: none;
 }
 
-/* Logout button at the bottom of the container */
 button.logout-btn {
     background-color: red;
     color: white;
@@ -120,3 +119,4 @@ button.logout-btn {
     display: block;
     width: auto; /* Adjust the width if necessary */
 }
+
