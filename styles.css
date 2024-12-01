@@ -12,7 +12,7 @@ body {
 }
 /* Only increase the size for the View Files page */
 .view-files-page .container {
-    max-width: 1000px;   /* Larger container size */
+    max-width: 10000px;   /* Larger container size */
     padding: 40px;       /* More padding for larger content area */
 }
 
