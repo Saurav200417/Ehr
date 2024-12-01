@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Files</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -25,35 +25,6 @@
     <button onclick="window.location.href='index.html'">Back</button>
 </div>
 
-<script>
-    const adminFiles = JSON.parse(sessionStorage.getItem('adminFiles')) || [];
-    const userFiles = JSON.parse(sessionStorage.getItem('userFiles')) || [];
-
-    const allFiles = [...adminFiles, ...userFiles];
-    const filesList = document.getElementById('files-list');
-
-    allFiles.forEach(file => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${file.name}</td>
-            <td>${file.cid}</td>
-            <td><button onclick="deleteFile('${file.name}')">Delete</button></td>
-        `;
-        filesList.appendChild(row);
-    });
-
-    function deleteFile(fileName) {
-        let adminFiles = JSON.parse(sessionStorage.getItem('adminFiles')) || [];
-        let userFiles = JSON.parse(sessionStorage.getItem('userFiles')) || [];
-
-        adminFiles = adminFiles.filter(file => file.name !== fileName);
-        userFiles = userFiles.filter(file => file.name !== fileName);
-
-        sessionStorage.setItem('adminFiles', JSON.stringify(adminFiles));
-        sessionStorage.setItem('userFiles', JSON.stringify(userFiles));
-
-        location.reload();
-    }
-</script>
+<script src="viewfiles.js"></script>
 </body>
 </html>
