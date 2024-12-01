@@ -10,11 +10,6 @@ body {
     padding: 0;
     transition: background-image 0.5s ease;
 }
-/* Only increase the size for the View Files page */
-.view-files-page .container {
-    max-width: 10000px;   /* Larger container size */
-    padding: 40px;       /* More padding for larger content area */
-}
 
 /* Background image after login */
 body.logged-in {
@@ -29,18 +24,19 @@ body.logged-in {
     margin-bottom: 20px;
 }
 
-/* Update container to use flexbox */
+/* Update container to use flexbox for layout */
 .container {
     display: flex;
     flex-direction: column;  /* Aligns children (elements) vertically */
-    justify-content: space-between; /* Makes space between elements */
+    justify-content: flex-start; /* Align content to the top, leaving space for the logout button */
     max-width: 800px;         /* Adjust container width */
     margin: 50px auto;
     padding: 30px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    height: auto;  /* Adjusts height to fit content */
+    height: 100%;  /* Take full height */
+    min-height: 400px; /* Ensure a minimum height */
 }
 
 /* Ensure logout button is at the bottom */
@@ -49,7 +45,6 @@ body.logged-in {
     width: 50%; /* Smaller size */
     margin: 20px auto; /* Center aligned */
 }
-
 
 #admin-container,
 #user-container {
@@ -119,12 +114,6 @@ button:hover {
 /* Hide popup when 'hidden' class is applied */
 .popup.hidden {
     display: none;
-}
-
-/* Logout button at the bottom */
-.bottom-logout {
-    margin-top: 20px;
-    width: 100%;
 }
 
 /* Styles for the View All Files page */
