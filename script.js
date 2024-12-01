@@ -27,9 +27,6 @@ function login() {
     if (user) {
         showPopup("Login Successful!");
         loginMessage.textContent = "";
-        
-        // Add the 'logged-in' class to the body
-        document.body.classList.add("logged-in");
 
         if (user.username === "admin") {
             document.getElementById("admin-container").classList.remove("hidden");
@@ -50,11 +47,7 @@ function logout() {
     document.getElementById("username").value = "";
     document.getElementById("password").value = "";
     document.getElementById("login-message").textContent = "";
-
-    // Remove the 'logged-in' class from the body
-    document.body.classList.remove("logged-in");
 }
-
 
 // Admin file upload
 document.getElementById("upload-form-admin").addEventListener("submit", (event) => {
