@@ -1,14 +1,22 @@
 /* Apply a background image to the entire page */
+/* Default background for the login page */
 body {
     font-family: Arial, sans-serif;
-    background-image: url("photo1.jpg");
-    background-size: cover;           /* Ensures the image covers the entire page */
-    background-repeat: no-repeat;      /* Prevents the image from repeating */
-    background-position: center;       /* Centers the image */
-    background-attachment: fixed;      /* Keeps the image fixed when scrolling */
+    background-image: url("photo1.jpg"); /* Background image for login page */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
+    transition: background-image 0.5s ease; /* Smooth transition for background change */
 }
+
+/* Background image after login */
+body.logged-in {
+    background-image: url("photo2.jpg"); /* Background image after login */
+}
+
 
 /* Main heading style */
 .main-heading {
