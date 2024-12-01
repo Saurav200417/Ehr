@@ -8,6 +8,12 @@ body {
     background-attachment: fixed;      /* Keeps the image fixed when scrolling */
     margin: 0;
     padding: 0;
+    transition: background-image 0.5s ease; /* Smooth transition for background change */
+}
+
+/* Background image after login */
+body.logged-in {
+    background-image: url("photo2.jpg");
 }
 
 /* Main heading style */
@@ -30,8 +36,8 @@ body {
 
 #admin-container,
 #user-container {
-    max-width: 800px; /* Increased width for admin and user containers */
-    padding: 30px;    /* Increased padding for a more spacious look */
+    max-width: 800px;
+    padding: 30px;
 }
 
 /* Heading styles */
@@ -45,9 +51,8 @@ input, button {
     width: 90%;
     padding: 15px;
     margin: 10px 0;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    box-sizing: border-box;
 }
 
 /* Button styling */
@@ -56,7 +61,7 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -97,8 +102,8 @@ button:hover {
     display: none;
 }
 
-/* Logout button at the bottom of the container */
+/* Logout button at the bottom */
 .bottom-logout {
-    margin-top: 20px;   /* Adds spacing at the top */
-    width: 100%;        /* Full-width button */
+    margin-top: 20px;
+    width: 100%;
 }
