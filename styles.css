@@ -10,6 +10,11 @@ body {
     padding: 0;
     transition: background-image 0.5s ease;
 }
+/* Only increase the size for the View Files page */
+.view-files-page .container {
+    max-width: 1000px;   /* Larger container size */
+    padding: 40px;       /* More padding for larger content area */
+}
 
 /* Background image after login */
 body.logged-in {
