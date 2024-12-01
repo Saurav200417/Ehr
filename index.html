@@ -21,30 +21,30 @@
     <p id="login-message"></p>
 </div>
 
+<!-- Admin Panel -->
 <div class="container hidden" id="admin-container">
     <h2>Admin Panel</h2>
-    <button class="logout-btn center-logout" onclick="logout()">Logout</button>
+    <button class="logout-btn center-logout" onclick="logout()">Logout</button> <!-- Logout button here -->
     <h3>Upload File</h3>
     <form id="upload-form-admin">
         <input type="text" id="file-name-admin" placeholder="File Name" required>
         <input type="text" id="file-cid-admin" placeholder="File CID" required>
         <button type="submit">Upload</button>
     </form>
-    
     <h3>Manage Access</h3>
     <form id="access-form">
         <input type="text" id="access-file-name" placeholder="File Name" required>
         <input type="text" id="user-address" placeholder="User Address" required>
         <button type="button" id="grant-access" onclick="grantAccess()">Grant Access</button>
     </form>
-    
     <h3>All Files</h3>
     <button onclick="window.location.href='view-files.html'">View All Files</button>
 </div>
 
+<!-- User Dashboard -->
 <div class="container hidden" id="user-container">
     <h2>User Dashboard</h2>
-    <button class="logout-btn center-logout" onclick="logout()">Logout</button>
+    <button class="logout-btn center-logout" onclick="logout()">Logout</button> <!-- Logout button here -->
     <h3>Upload File</h3>
     <form id="upload-form-user">
         <input type="text" id="file-name-user" placeholder="File Name" required>
@@ -54,6 +54,7 @@
     <h3>Your Files</h3>
     <button onclick="window.location.href='view-files.html'">View All Files</button>
 </div>
+
 
 <script src="script.js"></script>
 </body>
